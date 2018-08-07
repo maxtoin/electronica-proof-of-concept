@@ -9,7 +9,9 @@ En este repositorio pueden encontrarse todos los ficheros fuente para el desarro
 
 El diagrama de integración de elementos dentro del desarrollo electrónico es el mostrado a continuación:
 
-<img width="650" src="https://github.com/Teidesat/Electronica-proof-of-concept/blob/master/Referencias/Diagramas/Integraci%C3%B3n%20de%20elementos/Integracion_elem.png?raw=true" align="center" />
+<p align="center">
+  <img width="750" src="https://github.com/Teidesat/Electronica-proof-of-concept/blob/master/Referencias/Diagramas/Integraci%C3%B3n%20de%20elementos/Integracion_elem.png?raw=true" />
+</p>
 
 ## Herramientas y recursos utilizados
 
