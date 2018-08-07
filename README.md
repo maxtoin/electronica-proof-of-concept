@@ -5,8 +5,15 @@
 
 ## Introducción
 
+En este repositorio pueden encontrarse todos los ficheros fuente para el desarrollo de la electrónica de los *dummies* de comunicaciones ópticas.
+
 ## Herramientas y recursos utilizados
+
+Las herramientas utilizadas para el desarrollo de la electrónica han sido las siguientes:
 
 ## Trabajo Futuro
 
 ## Referencias
+
+- [Github Brown Space Engineering](https://github.com/BrownSpaceEngineering)
+- [Web Brown Space](https://brownspace.org/)
