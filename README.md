@@ -20,6 +20,8 @@ Las herramientas utilizadas para el desarrollo de la electrónica han sido las s
 - [KiCAD](http://kicad-pcb.org/)
 - [Libreoffice](https://es.libreoffice.org/)
 
+## Módulos desarrollados
+
 ## Trabajo Futuro
 
 ## Referencias
