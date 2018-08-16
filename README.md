@@ -22,7 +22,9 @@ Las herramientas utilizadas para el desarrollo de la electrónica han sido las s
 
 ## Módulos desarrollados
 
-## Trabajo Futuro
+Los módulos electrónicos desarrollados en este repositorio son los siguientes:
+
+- [ArduBoard](https://github.com/Teidesat/Electronica-proof-of-concept/tree/master/PCB/ArduBoard) - Módulo para el control de dispositivos a bajo nivel. Es el módulo encargado de enviar los pulsos codificados a los LED.
 
 ## Referencias
 
