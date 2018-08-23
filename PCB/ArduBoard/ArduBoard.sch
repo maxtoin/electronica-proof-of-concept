@@ -87,7 +87,7 @@ Wire Wire Line
 Wire Wire Line
 	1350 1050 1150 1050
 Wire Wire Line
-	2250 1650 1050 1650
+	2250 1650 1550 1650
 Wire Wire Line
 	1050 1750 2250 1750
 Wire Wire Line
@@ -229,17 +229,6 @@ AD6
 Text GLabel 1700 3350 2    50   Input ~ 0
 AD7
 $Comp
-L Device:Q_NMOS_GDS Q1
-U 1 1 5B767DF3
-P 6500 1550
-F 0 "Q1" H 6705 1596 50  0000 L CNN
-F 1 "Q_NMOS_GDS" H 6705 1505 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92" H 6700 1650 50  0001 C CNN
-F 3 "~" H 6500 1550 50  0001 C CNN
-	1    6500 1550
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0103
 U 1 1 5B768349
 P 6600 2000
@@ -250,70 +239,12 @@ F 3 "" H 6600 2000 50  0001 C CNN
 	1    6600 2000
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0104
-U 1 1 5B76843D
-P 5850 2000
-F 0 "#PWR0104" H 5850 2000 30  0001 C CNN
-F 1 "GND" H 5850 1930 30  0001 C CNN
-F 2 "" H 5850 2000 50  0001 C CNN
-F 3 "" H 5850 2000 50  0001 C CNN
-	1    5850 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R1
-U 1 1 5B768CDB
-P 5500 1550
-F 0 "R1" V 5293 1550 50  0000 C CNN
-F 1 "330" V 5384 1550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5430 1550 50  0001 C CNN
-F 3 "~" H 5500 1550 50  0001 C CNN
-	1    5500 1550
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 5B768D78
-P 5850 1700
-F 0 "R2" H 5920 1746 50  0000 L CNN
-F 1 "1k" H 5920 1655 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5780 1700 50  0001 C CNN
-F 3 "~" H 5850 1700 50  0001 C CNN
-	1    5850 1700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6600 2000 6600 1750
-Wire Wire Line
-	6300 1550 6150 1550
-Wire Wire Line
-	5850 1850 5850 2000
-Wire Wire Line
-	5850 1550 5650 1550
-Connection ~ 5850 1550
-$Comp
-L Device:R R3
-U 1 1 5B769336
-P 6600 1200
-F 0 "R3" H 6670 1246 50  0000 L CNN
-F 1 "5" H 6670 1155 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 6530 1200 50  0001 C CNN
-F 3 "~" H 6600 1200 50  0001 C CNN
-	1    6600 1200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6600 1350 7050 1350
-Connection ~ 6600 1350
-Text GLabel 7050 1350 2    50   Input ~ 0
-LED_LOAD
 Text GLabel 5350 1550 0    50   Input ~ 0
-D2
+CONTROL
 Text GLabel 6600 750  0    50   Input ~ 0
 36V
-Wire Wire Line
-	6600 1050 6600 750 
 Wire Notes Line
 	4600 600  4600 2150
 Wire Notes Line
@@ -322,8 +253,8 @@ Wire Notes Line
 	8750 2150 8750 600 
 Wire Notes Line
 	8750 600  4600 600 
-Text Notes 6950 2100 0    118  ~ 0
-Control de potencia
+Text Notes 6250 3850 0    118  ~ 0
+Control del led\n
 $Comp
 L Connector:Conn_01x02_Male J6
 U 1 1 5B76B4D0
@@ -381,30 +312,112 @@ Wire Wire Line
 Wire Wire Line
 	5250 1000 5100 1000
 $Comp
-L Device:LED D1
-U 1 1 5B76C6C6
-P 6150 1700
-F 0 "D1" V 6188 1583 50  0000 R CNN
-F 1 "LED" V 6097 1583 50  0000 R CNN
-F 2 "LED_THT:LED_D5.0mm" H 6150 1700 50  0001 C CNN
-F 3 "~" H 6150 1700 50  0001 C CNN
-	1    6150 1700
-	0    -1   -1   0   
-$EndComp
-Connection ~ 6150 1550
-Wire Wire Line
-	6150 1550 5850 1550
-Wire Wire Line
-	6150 1850 6150 2000
-$Comp
-L power:GND #PWR0107
-U 1 1 5B76CA7D
-P 6150 2000
-F 0 "#PWR0107" H 6150 2000 30  0001 C CNN
-F 1 "GND" H 6150 1930 30  0001 C CNN
-F 2 "" H 6150 2000 50  0001 C CNN
-F 3 "" H 6150 2000 50  0001 C CNN
-	1    6150 2000
+L Device:Q_NIGBT_GCE Q?
+U 1 1 5B7F07C7
+P 6500 1550
+F 0 "Q?" H 6691 1596 50  0000 L CNN
+F 1 "Q_NIGBT_GCE" H 6691 1505 50  0000 L CNN
+F 2 "" H 6700 1650 50  0001 C CNN
+F 3 "~" H 6500 1550 50  0001 C CNN
+	1    6500 1550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5350 1550 6300 1550
+Wire Wire Line
+	6600 750  6600 1150
+Wire Wire Line
+	6600 1150 6900 1150
+Connection ~ 6600 1150
+Wire Wire Line
+	6600 1150 6600 1350
+Text GLabel 6900 1150 2    50   Input ~ 0
+LED_LOAD
+Text GLabel 6150 3250 2    50   Input ~ 0
+CONTROL
+Text GLabel 5050 3000 0    50   Input ~ 0
+D2
+$Comp
+L Device:Q_NMOS_GDS Q?
+U 1 1 5B7F2AB0
+P 5700 3000
+F 0 "Q?" H 5905 3046 50  0000 L CNN
+F 1 "Q_NMOS_GDS" H 5905 2955 50  0000 L CNN
+F 2 "" H 5900 3100 50  0001 C CNN
+F 3 "~" H 5700 3000 50  0001 C CNN
+	1    5700 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5B7F2BF5
+P 5250 3250
+F 0 "D?" V 5288 3133 50  0000 R CNN
+F 1 "LED" V 5197 3133 50  0000 R CNN
+F 2 "" H 5250 3250 50  0001 C CNN
+F 3 "~" H 5250 3250 50  0001 C CNN
+	1    5250 3250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 3000 5250 3000
+Wire Wire Line
+	5250 3000 5250 3100
+Wire Wire Line
+	5500 3000 5250 3000
+Connection ~ 5250 3000
+$Comp
+L power:GND #PWR?
+U 1 1 5B7F3189
+P 5250 3550
+F 0 "#PWR?" H 5250 3550 30  0001 C CNN
+F 1 "GND" H 5250 3480 30  0001 C CNN
+F 2 "" H 5250 3550 50  0001 C CNN
+F 3 "" H 5250 3550 50  0001 C CNN
+	1    5250 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3550 5250 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5B7F354E
+P 5800 3550
+F 0 "#PWR?" H 5800 3550 30  0001 C CNN
+F 1 "GND" H 5800 3480 30  0001 C CNN
+F 2 "" H 5800 3550 50  0001 C CNN
+F 3 "" H 5800 3550 50  0001 C CNN
+	1    5800 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3200 5800 3250
+Wire Wire Line
+	5800 2800 5800 2450
+Wire Wire Line
+	6150 3250 5800 3250
+Connection ~ 5800 3250
+Wire Wire Line
+	5800 3250 5800 3550
+Wire Notes Line
+	4600 2250 7650 2250
+Wire Notes Line
+	7650 2250 7650 3900
+Wire Notes Line
+	7650 3900 4600 3900
+Wire Notes Line
+	4600 3900 4600 2250
+Text Notes 7500 2050 0    118  ~ 0
+Potencia led\n
+Text GLabel 1650 1500 2    50   Input ~ 0
+5V
+Wire Wire Line
+	1650 1500 1550 1500
+Wire Wire Line
+	1550 1500 1550 1650
+Connection ~ 1550 1650
+Wire Wire Line
+	1550 1650 1050 1650
+Text GLabel 5800 2450 2    50   Input ~ 0
+5V
 $EndSCHEMATC
