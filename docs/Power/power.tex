@@ -1,0 +1,143 @@
+%Copyright 2014 Jean-Philippe Eisenbarth
+% Modified by Ivan Rodriguez <alu0100765755@ull.edu.es> 2018
+%This program is free software: you can 
+%redistribute it and/or modify it under the terms of the GNU General Public 
+%License as published by the Free Software Foundation, either version 3 of the 
+%License, or (at your option) any later version.
+%This program is distributed in the hope that it will be useful,but WITHOUT ANY 
+%WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
+%PARTICULAR PURPOSE. See the GNU General Public License for more details.
+%You should have received a copy of the GNU General Public License along with 
+%this program.  If not, see <http://www.gnu.org/licenses/>.
+
+%Based on the code of Yiannis Lazarides
+%http://tex.stackexchange.com/questions/42602/software-requirements-specification-with-latex
+%http://tex.stackexchange.com/users/963/yiannis-lazarides
+%Also based on the template of Karl E. Wiegers
+%http://www.se.rit.edu/~emad/teaching/slides/srs_template_sep14.pdf
+%http://karlwiegers.com
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage{mwe} % for blindtext and example-image-a in example
+\usepackage{wrapfig}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% BIBLIOGRAFÍA
+\usepackage[backend=biber,citestyle=numeric]{biblatex}
+\bibliography{libreria}
+
+% Figuras
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+%Colores
+% \usepackage{color}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\definecolor{gris10}{rgb}{0.9,0.9,0.9}
+
+\usepackage{listings}
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Especificaciones de potencia para la prueba de concepto de comunicaciones ópticas},    % title
+    pdfauthor={Iván Rodríguez - TeideSat},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{0.1 }
+\date{}
+%\title{%
+
+%}
+\usepackage{hyperref}
+\begin{document}
+ \hfill\includegraphics[width=2.7cm,height=2.6cm]{Logo.png}\\[\bigskipamount]\vspace*{-1.5cm}
+\begin{flushright}
+    \rule{15cm}{3pt}\vskip0.8cm
+    \begin{bfseries}
+        \Huge{ESPECIFICACIONES \\ DE POTENCIA}\\
+        \vspace{1cm}
+        para\\
+        \vspace{1cm}
+        Prueba de concepto de comunicaciones ópticas\\
+        \vspace{2.5cm}
+        \LARGE{Versión \myversion aprobada}\\
+        \vspace{3cm}
+        \large{Escrito por  Sección Electrónica} \\
+        \vspace{0.5cm}
+        TeideSAT\\
+        \vspace{1.5cm}
+        \today\\
+    \end{bfseries}
+\end{flushright}
+
+\tableofcontents
+
+
+\chapter*{Revisión histórica de cambios}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+	    Nombre & Fecha & Razón de cambios & Versión\\
+        \hline
+	    Iván Rodríguez & 30/11/2018 & Comienzo de la redacción & 0.1\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\chapter{Introducción}
+
+\section{Propósito}
+
+El propósito de los \textit{dummies} para el proyecto de prueba de concepto de comunicaciones ópticas es la verificación en tierra de la posibilidad de envío y recepción de un mensaje codificado. Es por ello necesario, establecer las especificaciones de los prototipos para su estudio en detalle.
+
+\section{Convención de documentos}
+Para la redacción de este documento se han seguido las directrices indicadas en el libro \textbf{Low Earth Orbit Satellite Design}~\cite{sebestyenlow2018}. Se han seguido las directrices de este documento para los cálculos de las especificaciones.
+
+\section{Audiencia destinataria y sugerencias de lectura}
+Este documento está dirigido principalmente a los miembros implicados en el desarrollo de las estaciones para los test basados en comunicaciones ópticas. En el resto del documento pueden encontrar las siguientes secciones:
+\begin{itemize}
+ \item En el capítulo 1...
+ \item En el capítulo 2...
+\end{itemize}
+
+La lectura de los capítulos X e Y son de especial interés para desarrolladores.
+
+\section{Alcance del documento}
+En este proyecto, se especifican en detalle las especificaciones y requerimientos de potencia tanto para la estación emisora como para la estación receptora. Se justificarán todos los cálculos realizados para la elaboración de las tablas de potencia.
+
+\section{Referencias}
+
+La documentación utilizada para la redacción de este documento ha sido la siguiente:
+
+\printbibliography[heading=none]
+
+\chapter{Especificaciones de potencia para el receptor}
+
+\chapter{Especificaciones de potencia para el emisor}
+
+\end{document}
