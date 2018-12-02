@@ -121,8 +121,8 @@ Para la redacción de este documento se han seguido las directrices indicadas en
 \section{Audiencia destinataria y sugerencias de lectura}
 Este documento está dirigido principalmente a los miembros implicados en el desarrollo de las estaciones para los test basados en comunicaciones ópticas. En el resto del documento pueden encontrar las siguientes secciones:
 \begin{itemize}
- \item En el capítulo 1...
- \item En el capítulo 2...
+ \item En el capítulo~\ref{ch:receptor} pueden encontrarse las especificaciones para la estación de recepción.
+ \item En el capítulo~\ref{ch:emisor} pueden encontrase las especificaciones para la estación de emisión.
 \end{itemize}
 
 La lectura de los capítulos X e Y son de especial interés para desarrolladores.
@@ -136,8 +136,58 @@ La documentación utilizada para la redacción de este documento ha sido la sigu
 
 \printbibliography[heading=none]
 
-\chapter{Especificaciones de potencia para el receptor}
+\chapter{Especificaciones de potencia para el receptor \label{ch:receptor}}
 
-\chapter{Especificaciones de potencia para el emisor}
+\section{Tabla de especificación de potencia de diseño}
+
+La especificaciones de diseño para la potencia del equipo de receptor se muestran en la Tabla~\ref{tab:potenciaReceptor}.
+
+\begin{table}[h!]
+\begin{tabular}{|c|c|c|}
+\hline 
+\textbf{Componente} & \textbf{Potencia (w)} & \textbf{Descripción} \\ 
+\hline 
+Raspberry Pi+ Cámara & 12.5 & Control de todo el sistema de emisión y codificación. \\ 
+\hline 
+Módulo de radiofrecuencia & 10 & Módulo de comunicación por radiofrecencia ($\le$ 1km)  \\ 
+\hline 
+Arduino & 5 & Control a bajo nivel de todo el sistema de recepción \\ 
+\hline 
+Sistema de potencia & 20 & Sistema para la alimentación del led \\ 
+\hline 
+ Total & 47.5 &  \\ 
+\hline 
+\end{tabular} 
+\caption{Potencias para la estación de recepción.}
+\label{tab:potenciaReceptor}
+\end{table}
+
+\chapter{Especificaciones de potencia para el emisor \label{ch:emisor}}
+
+\section{Tabla de especificación de potencia de diseño}
+
+La especificaciones de diseño para la potencia del equipo de emisor se muestran en la Tabla~\ref{tab:potenciaEmisor}.
+
+\begin{table}[h!]
+\begin{tabular}{|c|c|c|}
+\hline 
+\textbf{Componente} & \textbf{Potencia (w)} & \textbf{Descripción} \\ 
+\hline 
+Raspberry Pi & 12.5 & Control de todo el sistema de emisión y codificación \\ 
+\hline 
+Módulo de radiofrecuencia & 10 & Módulo de comunicación por radiofrecencia ($\le$ 1km)  \\ 
+\hline 
+Arduino & 5 & Control a bajo nivel de todo el sistema de emisión \\ 
+\hline 
+Led & 150 & Componente para la emisión de pulsos \\ 
+\hline 
+Sistema de potencia & 20 & Sistema para la alimentación del led \\ 
+\hline 
+ Total & 197.5 &  \\ 
+\hline 
+\end{tabular} 
+\caption{Potencias para la estación de emisión.}
+\label{tab:potenciaEmisor}
+\end{table}
 
 \end{document}
